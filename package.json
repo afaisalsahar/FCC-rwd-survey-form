@@ -1,0 +1,24 @@
+{
+  "name": "fcc-rwd-survey-form",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tailwindcss": "npx tailwindcss -i ./styles/tailwindcss-starter.css -o ./styles/styles.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afaisalsahar/FCC-rwd-survey-form.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/afaisalsahar/FCC-rwd-survey-form/issues"
+  },
+  "homepage": "https://github.com/afaisalsahar/FCC-rwd-survey-form#readme",
+  "dependencies": {
+    "tailwindcss": "^3.2.4"
+  }
+}
