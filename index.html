@@ -7,103 +7,110 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />    
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./styles/styles.css">
 
     <title>FreeCodeCamp / Survey Form</title>
 </head>
 <body>
-    
-    <div>
-        <h1>Survey Form</h1>
-        <p>Thank you for taking the time to help us improve the platform</p>
 
-        <form action="#">
-            <div>
-                <label for="name-label">Name</label>
-                <input type="text" name="name" id="name-label" placeholder="Your Name" required>
-                <i class="fa-regular fa-user-circle"></i>
+    <div class="survey__container">
+        <h1 class="survey__title">
+            Survey Form
+        </h1>
+        <p class="survey__note">Thank you for taking the time to help us improve the platform</p>
+
+        <form class="survey-form" action="#">
+            <div class="survey-form__field survey-form__field--icon">
+                <label class="survey-form__label" for="name-label">Name</label>
+                <input class="survey-form__input" type="text" name="name" id="name-label" placeholder="Your Name" required>
+                <i class="survey-form__icon fa-regular fa-user-circle"></i>
             </div>
-            <div>
-                <label for="email-label">Mail</label>
-                <input type="email" name="email" id="email-label" placeholder="Your Email" required>
-                <i class="fa-regular fa-envelope"></i>
+            <div class="survey-form__field survey-form__field--icon">
+                <label class="survey-form__label" for="email-label">Mail</label>
+                <input class="survey-form__input" type="email" name="email" id="email-label" placeholder="Your Email" required>
+                <i class="survey-form__icon fa-regular fa-envelope"></i>
             </div>
-            <div>
-                <label for="phone-label">Phone</label>
-                <input type="tel" id="phone-label" name="phone" pattern="[0-9]{10}" placeholder="Your Phone" required>
-                <i class="fa-solid fa-mobile-alt"></i>
+            <div class="survey-form__field survey-form__field--icon">
+                <label class="survey-form__label" for="phone-label">Phone</label>
+                <input class="survey-form__input" type="tel" id="phone-label" name="phone" pattern="[0-9]{10}" placeholder="Your Phone" required>
+                <i class="survey-form__icon fa-solid fa-mobile-alt"></i>
             </div>
-            <div>
-                <label for="message">Message</label>
-                <textarea name="message" id="message" placeholder="Your Message"></textarea>    
+            <div class="survey-form__field survey-form__field--icon">
+                <label class="survey-form__label" for="message">Message</label>
+                <textarea class="survey-form__textarea" name="message" id="message" placeholder="Your Message"></textarea>    
             </div>
-            <div>
-                <label for="role-dropdown">Which option best describes your current role?</label>
-                <div>
-                    <select name="current-role" id="role-dropdown">
-                        <option value="Select Current Role" selected disabled>Select current role</option>
-                        <option value="Student">Student</option>
-                        <option value="Full Time Job">Full Time Job</option>
-                        <option value="Full Time Learner">Full Time Learner</option>
-                        <option value="Prefer not to say">Perfer not to say</option>
-                        <option value="Other">Other</option>
+            <div class="survey-form__field">
+                <label class="survey-form__label" for="role-dropdown">Which option best describes your current role?</label>
+                <div class="survey-form__dropdown">
+                    <select class="survey-form__items" name="current-role" id="role-dropdown">
+                        <option class="survey-form__item" value="Select Current Role" selected disabled>Select current role</option>
+                        <option class="survey-form__item" value="Student">Student</option>
+                        <option class="survey-form__item" value="Full Time Job">Full Time Job</option>
+                        <option class="survey-form__item" value="Full Time Learner">Full Time Learner</option>
+                        <option class="survey-form__item" value="Prefer not to say">Perfer not to say</option>
+                        <option class="survey-form__item" value="Other">Other</option>
                     </select>    
                 </div>
             </div>
-            <div>
-                <label for="feature-dropdown">What is your favorite feature of freeCodeCamp?</label>
-                <div>
-                    <select name="favorite-feature" id="feature-dropdown">
-                        <option value="Select an option" selected disabled>Select an option</option>
-                        <option value="Challenges">Challenges</option>
-                        <option value="Projects">Projects</option>
-                        <option value="Community">Community</option>
-                        <option value="Open Source">Open Source</option>
+            <div class="survey-form__field">
+                <label class="survey-form__label" class="survey-form__label" for="feature-dropdown">What is your favorite feature of freeCodeCamp?</label>
+                <div class="survey-form__dropdown">
+                    <select class="survey-form__items" name="favorite-feature" id="feature-dropdown">
+                        <option class="survey-form__item" value="Select an option" selected disabled>Select an option</option>
+                        <option class="survey-form__item" value="Challenges">Challenges</option>
+                        <option class="survey-form__item" value="Projects">Projects</option>
+                        <option class="survey-form__item" value="Community">Community</option>
+                        <option class="survey-form__item" value="Open Source">Open Source</option>
                     </select>    
                 </div>
             </div>
-            <div>
-                <p>Would you recommend freeCodeCamp to a friend?</p>
-                <input type="radio" id="definitly" value="definitly" name="recommend-radio">
-                <label for="definitly">Definitly</label>
-                <input type="radio" id="maybe" value="Maybe" name="recommend-radio">
-                <label for="maybe">Maybe</label>
-                <input type="radio" id="not-sure" value="Not Sure" name="recommend-radio">
-                <label for="not-sure">Note Sure</label>
+            <div class="survey-form__field survey-form__field--recommend">
+                <p class="survey-form__note">Would you recommend freeCodeCamp to a friend?</p>
+                <input class="survey-form__input" type="radio" id="definitly" value="definitly" name="recommend-radio">
+                <label class="survey-form__label" for="definitly">Definitly</label>
+                <input class="survey-form__input" type="radio" id="maybe" value="Maybe" name="recommend-radio">
+                <label class="survey-form__label" for="maybe">Maybe</label>
+                <input class="survey-form__input" type="radio" id="not-sure" value="Not Sure" name="recommend-radio">
+                <label class="survey-form__label" for="not-sure">Note Sure</label>
             </div>
-            <div>
-                <p>What would you like to see improved? <span>(check all that apply)</span></p>
-                <input type="checkbox" name="front-end-projects" id="front-end-projects" value="Front-end Projects">
-                <label class="wider-box" for="front-end-projects">Front-end Projects</label>
+            <div class="survey-form__field survey-form__field--improve">
+                <p class="survey-form__note">What would you like to see improved? <span>(check all that apply)</span></p>
+                <input class="survey-form__input" type="checkbox" name="front-end-projects" id="front-end-projects" value="Front-end Projects">
+                <label class="survey-form__label" class="wider-box" for="front-end-projects">Front-end Projects</label>
 
-                <input type="checkbox" name="back-end-projects" id="back-end-projects" value="Back-end Projects">
-                <label class="wider-box" for="back-end-projects">Back-end Projects</label>
+                <input class="survey-form__input" type="checkbox" name="back-end-projects" id="back-end-projects" value="Back-end Projects">
+                <label class="survey-form__label" class="wider-box" for="back-end-projects">Back-end Projects</label>
 
-                <input type="checkbox" name="data-visualization" id="data-visualization" value="Data Visualization">
-                <label class="wider-box" for="data-visualization">Data Visualization</label>
+                <input class="survey-form__input" type="checkbox" name="data-visualization" id="data-visualization" value="Data Visualization">
+                <label class="survey-form__label" class="wider-box" for="data-visualization">Data Visualization</label>
 
-                <input type="checkbox" name="open-source-community" id="open-source-community" value="Open Source Community">
-                <label class="wider-box" for="open-source-community">Open Source</label>
-                <input type="checkbox" name="gitter-help-rooms" id="gitter-help-rooms" value="Gitter Help Rooms">
-                <label class="wider-box" for="gitter-help-rooms">Gitter Help Rooms</label>
-                <input type="checkbox" name="additional-courses" id="additional-courses" value="Additional Courses">
-                <label class="wider-box" for="additional-courses">Additional Courses</label>
-                <input type="checkbox" name="challenges" id="challenges" value="Challenges">
-                <label for="challenges">Challenges</label>
-                <input type="checkbox" name="videos" id="videos" value="Videos">
-                <label for="videos">Videos</label>
-                <input type="checkbox" name="city-meetups" id="city-meetups" value="City Meetups">
-                <label for="city-meetups">City Meetups</label>
-                <input type="checkbox" name="wiki" id="wiki" value="Wiki">
-                <label for="wiki">Wiki</label>
-                <input type="checkbox" name="forum" id="forum" value="Forum">
-                <label for="forum">Forum</label>
-                <input type="checkbox" name="projects" id="projects" value="Projects">
-                <label for="projects">Projects</label>
+                <input class="survey-form__input" type="checkbox" name="open-source-community" id="open-source-community" value="Open Source Community">
+                <label class="survey-form__label" class="wider-box" for="open-source-community">Open Source</label>
+                <input class="survey-form__input" type="checkbox" name="gitter-help-rooms" id="gitter-help-rooms" value="Gitter Help Rooms">
+                <label class="survey-form__label" class="wider-box" for="gitter-help-rooms">Gitter Help Rooms</label>
+                <input class="survey-form__input" type="checkbox" name="additional-courses" id="additional-courses" value="Additional Courses">
+                <label class="survey-form__label" class="wider-box" for="additional-courses">Additional Courses</label>
+                <input class="survey-form__input" type="checkbox" name="challenges" id="challenges" value="Challenges">
+                <label class="survey-form__label" for="challenges">Challenges</label>
+                <input class="survey-form__input" type="checkbox" name="videos" id="videos" value="Videos">
+                <label class="survey-form__label" for="videos">Videos</label>
+                <input class="survey-form__input" type="checkbox" name="city-meetups" id="city-meetups" value="City Meetups">
+                <label class="survey-form__label" for="city-meetups">City Meetups</label>
+                <input class="survey-form__input" type="checkbox" name="wiki" id="wiki" value="Wiki">
+                <label class="survey-form__label" for="wiki">Wiki</label>
+                <input class="survey-form__input" type="checkbox" name="forum" id="forum" value="Forum">
+                <label class="survey-form__label" for="forum">Forum</label>
+                <input class="survey-form__input" type="checkbox" name="projects" id="projects" value="Projects">
+                <label class="survey-form__label" for="projects">Projects</label>
             </div>
 
-            <button>Submit</button>
+            <button class="survey-form__submit">Submit</button>
         </form>
     </div>
 

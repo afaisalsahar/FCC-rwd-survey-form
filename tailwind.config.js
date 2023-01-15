@@ -2,7 +2,14 @@
 module.exports = {
   content: ["./*.html"],
   theme: {
-    extend: {},
+    fontFamily: {
+      'poppins': ['Poppins', 'sans-serif'],
+    },
+    extend: {
+      flexBasis: {
+        'radio-custom': '31%'
+      }
+    },
   },
   plugins: [],
 }
